@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Checkpoint</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>12 Prepare : Checkpoint A - Non-member Operator Overloading</h1>
+
+
+        <p>After completing (or <i>while</i> completing) the <a href="165-12-prepare.html">preparation material</a> for this week, complete the following exercise.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            This checkpoint is intended to help you practice the syntax of operator overloading with non-member functions. You will work with the money class we have used in past assignments and implement a set of operators.
+        </p>
+
+        <h2>Instructions</h2>
+
+            <ol>
+                <li>Begin with a working (but simplistic) implementation of a <code>Money</code> class that contains integer values for dollars and cents. You can copy this code (and a driver that file that you'll need) to your directory via the following:</li>
+
+
+<div class="code">
+mkdir check12a
+cd check12a
+
+cp /home/cs165new/check12a/* .
+</div>
+
+                <li>This class has the following class diagram:</li>
+                <div class="class-diagrams">
+                    <table class="table-class-diagram">
+                        <tr><th>Money</th></tr>
+                        <tr><td>-dollars : int</td></tr>
+                        <tr><td>-cents : int</td>
+                        </tr>
+                        <tr class='class-diagram-spacer'><td></td></tr>
+                        <tr><td>+Money()</td></tr>
+                        <tr><td>+Money(dollars, cents)</td></tr>
+                        <tr><td>+getDollars() : int</td></tr>
+                        <tr><td>+getCents() : int</td></tr>
+                        <tr><td>+setDollars(int) : void</td></tr>
+                        <tr><td>+getCents(int) : void</td></tr>
+                        <tr><td>+prompt() : void</td></tr>
+                        <tr><td>+display() : void</td></tr>
+                    </table>
+                </div>
+
+                <li>You need to overload the following operators as non-member functions (in other words regular functions outside the class). Please note that the prototypes for these functions should still be in the Money.h file, but should come after the class. Then the bodies of these functions should be in the Money.cpp file.</li>
+                <li>Implement the following:
+                    <ul>
+                        <li><code>==</code> (Equivalence) - Check if the dollars and cents amounts are equal.</li>
+                        <li><code>!=</code> (Not Equal) - the opposite of the <code>==</code> operator.</li>
+                        <li><code>&lt;&lt;</code> (Stream insertion aka the "output" operator) - This should behave like the display function and allow you to output a Money object to the console, with a statement such as "<code>cout &lt;&lt; myMoney;</code>" that would produce output in the following format: <code>$3.45</code> or: <code>$3.05</code> or: <code>$0.61</code></li>
+                    </ul>
+                </li>
+                <li>Fill in the main function (in check08a.cpp) to use your operators as noted.</li>
+
+            </ol>
+
+        <h2>Sample Output</h2>
+        <p>
+            The following is an example of output for this program:
+        </p>
+<div class="code">
+Dollars: <span class="user-input">10</span>
+Cents: <span class="user-input">67</span>
+Dollars: <span class="user-input">11</span>
+Cents: <span class="user-input">67</span>
+
+The values are: $10.67 and $11.67
+
+Using the == operator, they are:
+Not Equal
+
+Using the != operator, they are:
+Not Equal
+</div>
+        <p>Another example would be:</p>
+<div class="code">
+Dollars: <span class="user-input">8</span>
+Cents: <span class="user-input">17</span>
+Dollars: <span class="user-input">8</span>
+Cents: <span class="user-input">17</span>
+
+The values are: $8.17 and $8.17
+
+Using the == operator, they are:
+Equal
+
+Using the != operator, they are:
+Equal
+</div>
+
+        <h2>Testbed</h2>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+        <p>Please note that it is possible to do this assignment without overloading the operators, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.
+        </p>
+
+        <h2>Helpful commands</h2>
+<div class="code">
+tar -cf check12a.tar makefile *.h *.cpp
+testBed cs165new/check12a check12a.tar
+submit check12a.tar
+</div>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
