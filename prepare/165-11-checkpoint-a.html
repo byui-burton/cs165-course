@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Checkpoint</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>11 Prepare : Checkpoint A - Function Templates</h1>
+
+
+        <p>After completing (or <i>while</i> completing) the <a href="165-11-prepare.html">preparation material</a> for this week, complete the following exercise.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            This checkpoint is intended to help you practice the syntax of function templates. You are provided with functions that sort a list of integers. Your task is to convert these to be function templates so they can be used to sort lists of floats and strings as well.
+        </p>
+       
+        <h2>Instructions</h2>
+
+        <ol>
+            <li>The provided code has functions to sort a list. It performs a selection sort which finds smallest value in the list and moves it to the front. Then, it finds the next smallest item, and puts it in the next spot.</li>
+            <li>The complete logic of these functions is provided. You do not need to worry about figuring out how to implement a selection sort.</li>
+            <li>The provided code has three functions that build lists of integers, floats, and strings. The first of these works as is, but the floats and strings do not work yet, because the sort functions only work with integers. Your task is to convert them to function templates so they work for any data type.</li>
+
+            <li>
+                <p>Begin by copying the starting file: <code>/home/cs165new/check11a.cpp</code>. This function contains the following functions:</p>
+                <ul>
+                    <li><code>swapValues</code> - Currently swaps two integers. You need to change it to a function template to swap two of any kind of data.</li>
+                    <li><code>indexOfSmallest</code> - Currently finds the smallest value in a certain range of a list of integers. You need to change it to a function template that can find the smallest value in a list of any type.</li>
+                    <li><code>sort</code> - Currently takes a list of integers and calls the functions above to sort it. You need to change this to a function template so it can sort a list of any type.</li>
+                    <li><code>doIntList</code> - You do not need to change this. It creates a list of integers and passes it to the sort function and then displays the resulting list.</li>
+                    <li><code>doFloatList</code> - You do not need to change this. It builds, sorts, and displays a list of floats. This function currently does not work because there is no sort function for floats. Once you convert the other functions to functions templates, this will work correctly.</li>
+                    <li><code>doStringList</code> - You do not need to change this. It is the same as the doFloatList function, except for strings.</li>
+                    <li><code>main</code> - You do not need to change this. It simply calls the functions above.</li>
+                </ul>
+            </li>
+
+            <li>Just a reminder. All you should need to to for this assignment is convert those three functions to function templates. This means putting the template line of code right before the function and changing some of the data types to "T" rather than int. Keep in mind, that not all the ints in those functions need to change to T's. The variables that hold indexes and sizes will stay integers, only the ones that refer to data should change to T's.</li>
+
+        </ol>
+
+        <h2>Sample Output</h2>
+        <p>
+            The following is an example of output for this program:
+        </p>
+<div class="code">
+Please enter 5 ints.
+Enter value 1: <span class="user-input">42</span>
+Enter value 2: <span class="user-input">17</span>
+Enter value 3: <span class="user-input">4</span>
+Enter value 4: <span class="user-input">22</span>
+Enter value 5: <span class="user-input">91</span>
+4
+17
+22
+42
+91
+
+Please enter 5 floats.
+Enter value 1: <span class="user-input">3.14</span>
+Enter value 2: <span class="user-input">2.75</span>
+Enter value 3: <span class="user-input">11.49</span>
+Enter value 4: <span class="user-input">23.31</span>
+Enter value 5: <span class="user-input">1.56</span>
+1.56
+2.75
+3.14
+11.49
+23.31
+
+Please enter 5 strings.
+Enter value 1: <span class="user-input">this</span>
+Enter value 2: <span class="user-input">list</span>
+Enter value 3: <span class="user-input">is</span>
+Enter value 4: <span class="user-input">not</span>
+Enter value 5: <span class="user-input">sorted</span>
+is
+list
+not
+sorted
+this
+</div>
+
+
+        <h2>Testbed</h2>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+        <p>Please note that it is possible to do this assignment without using function templates, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.
+        </p>
+
+        <h2>Helpful commands</h2>
+<div class="code">
+testBed cs165new/check11a check11a.cpp
+submit check11a.cpp
+</div>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
