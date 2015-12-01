@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Team Activity</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+        <h1>12 Teach : Team Activity - Operator Overloading</h1>
+
+
+        <p>This activity is designed to be completed during class.
+        </p>
+
+        <h1>Overview</h1>
+        <p>This activity will help you practice the syntax of operator overloading.</p>
+
+        <p>Your assignment is to overload operators for a basic Point and Velocity class.</p>
+
+        <p>The velocity class you have been working on in your projects is likely more sophisticated than the simple one you will be provided with. The hope is that as a team, you can overload some operators for this class that may prove helpful in your projects. Then you can individually implement these into your own project code.</p>
+
+        <h1>Instructions</h1>
+        <p>Divide your teams into groups of 2-3. You should all work together on one laptop, then make sure everyone in your team gets a copy of the work that you complete.</p>
+
+        <p>Begin with the code at: <code>/home/cs165new/ta12/*</code></p>
+
+        <p>This code includes the following two classes:</p>
+
+        <div class="class-diagrams">
+            <table class="table-class-diagram">
+                <tr><th>Point</th></tr>
+                <tr><td>-x : float</td></tr>
+                <tr><td>-y : float</td>
+                </tr>
+                <tr class='class-diagram-spacer'><td></td></tr>
+                <tr><td>+getX() : float</td></tr>
+                <tr><td>+getY() : float</td></tr>
+                <tr><td>+setX(float) : void</td></tr>
+                <tr><td>+setY(float) : void</td></tr>
+                <tr><td>+addX(float) : void</td></tr>
+                <tr><td>+addY(float) : void</td></tr>
+            </table>
+            <table class="table-class-diagram">
+                <tr><th>Velocity</th></tr>
+                <tr><td>-dx : float</td></tr>
+                <tr><td>-dy : float</td>
+                </tr>
+                <tr class='class-diagram-spacer'><td></td></tr>
+                <tr><td>+getDx() : float</td></tr>
+                <tr><td>+getDy() : float</td></tr>
+                <tr><td>+setDx(float) : void</td></tr>
+                <tr><td>+setDy(float) : void</td></tr>
+            </table>
+        </div>
+
+
+        <h2>Core Requirements</h2>
+        <ol>
+
+            <li>Overload the following operators as <strong>non-member</strong> functions. Then, un-comment the section of code in ta12.cpp marked Part I.</p>
+
+                <ul>
+                    <li><code>Velocity + Velocity</code> : Add dx to dx and dy to dy.</li>
+                    <li><code>Velocity += Velocity</code> : Add the dx and dy of the value on the right to the current object.</li>
+                </ul>
+            </li>
+
+            <li>Overload the following operators as non-member <strong>friend</strong> functions. Then, un-comment the section of code in ta12.cpp marked Part II.</p>
+
+                <ul>
+                    <li><code>Velocity - Velocity</code> : Subtract dx from dx and dy from dy.</li>
+                    <li><code>Velocity -= Velocity</code> : Subtract the dx and dy of the value on the right from the current object.</li>
+                </ul>
+            </li>
+
+            <li>Overload the following operators as <strong>member</strong> functions of the Point class. Then, un-comment the section of code in ta12.cpp marked Part III.</p>
+
+                <ul>
+                    <li><code>Point += Velocity</code> : Add the dx and dy values of the <code>Velocity</code> object to the x and y values of the <code>Point</code>.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p>When you complete these requirements, show your code to your instructor to "pass it off."</p>
+
+        <h2>Stretch Challenges</h2>
+        <p> After completing the above steps. Make sure that everyone on the entire team is to this point and understands the material. Then, if you have time, move onto the following stretch challenges.</p>
+
+        <ol>
+            <li>Overload the following operators. Then, un-comment the section of code marked, Stretch I.</li>
+                <ul>
+                    <li><code>Velocity == Velocity</code> : Returns true if the dx and dy values on the left are within 0.001 of the values on the right. (Thought question: Why not check if they are exactly the same?)</li>
+                    <li><code>Velocity != Velocity</code> : Opposite of the == operator.</li>
+                    <li><code>Velocity &gt; Velocity</code> : Returns true if the magnitude of the velocity on the left is greater than the one on the right.</li>
+                    <li><code>Velocity &lt; Velocity</code> : Similar to above.</li>
+                    <li><code>Velocity &gt;= Velocity</code> : Similar to above.</li>
+                    <li><code>Velocity &lt;= Velocity</code> : Similar to above.</li>
+                </ul>
+                <p>Don't forget that once you have implemented an operator, you can use it to implement the others!</p>
+
+            <li>Overload the following operators. Then, un-comment the section of code marked, Stretch II.</li>
+                <ul>
+                    <li><code>cout &lt;&lt; Velocity</code> : Output the Velocity in the format: <code>(dx=1.23, dy=4.56)</code></li>
+                    <li><code>cin &gt;&gt; Velocity</code> : Reads in a velocity in the format: <code>1.23 4.56</code></li>
+                </ul>
+
+            <li>Overload the following operators. Then, un-comment the section of code marked, Stretch III.</li>
+                <ul>
+                    <li><code>++Velocity</code> : Adds one to both the dx and dy and returns a reference to the object.</li>
+                    <li><code>Velocity++</code> : Adds one to both the dx and dy and returns a copy of the <em>old</em> object.</li>
+                </ul>
+        </ol>
+
+
+        <h1>Submission</h1>
+        <p>You do not need to submit your program (just make sure that everyone has a copy of it for their reference). Instead, answer the accompanying questions in the I-Learn quiz.</p>
+
+
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
