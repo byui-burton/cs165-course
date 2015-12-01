@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Checkpoint</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>12 Prepare : Checkpoint B - Member Operator Overloading</h1>
+
+
+        <p>After completing (or <i>while</i> completing) the <a href="165-12-prepare.html">preparation material</a> for this week, complete the following exercise.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            This checkpoint is intended to help you practice the syntax of operator overloading with <em>member</em> functions. You will work with the same money class that you did in Checkpoint A, implementing a few more operators.
+        </p>
+
+        <h2>Instructions</h2>
+
+            <ol>
+                <li>Begin with a working (but simplistic) implementation of a <code>Money</code> class that contains integer values for dollars and cents. You can copy this code (and a driver that file that you'll need) to your directory via the following:</li>
+
+
+<div class="code">
+mkdir check12b
+cd check12b
+
+cp /home/cs165new/check12b/* .
+</div>
+
+                <p>You could certainly use your class from Checkpoint A (there is no conflict by have some member and some non-member operators), but by design, this assignment will not leverage any of the new functionality you added, so it may be easier to start with a new copy of the class. In either case, you will want to get the new driver file.</p>
+
+                <li>This class has the following class diagram:</li>
+                <div class="class-diagrams">
+                    <table class="table-class-diagram">
+                        <tr><th>Money</th></tr>
+                        <tr><td>-dollars : int</td></tr>
+                        <tr><td>-cents : int</td>
+                        </tr>
+                        <tr class='class-diagram-spacer'><td></td></tr>
+                        <tr><td>+Money()</td></tr>
+                        <tr><td>+Money(dollars, cents)</td></tr>
+                        <tr><td>+getDollars() : int</td></tr>
+                        <tr><td>+getCents() : int</td></tr>
+                        <tr><td>+setDollars(int) : void</td></tr>
+                        <tr><td>+setCents(int) : void</td></tr>
+                        <tr><td>+prompt() : void</td></tr>
+                        <tr><td>+display() : void</td></tr>
+                        <tr><td>-handleOverflow() : void</td></tr>
+                    </table>
+                </div>
+
+                <li>You need to overload the following operators as <strong>member</strong> functions (in other words methods contained inside the class). This means that you should put the prototypes in your class in the <code>Money.h</code> file, and the bodies of these functions should be in the <code>Money.cpp</code> file.</li>
+                <li>Assuming two <code>Money</code> objects, <code>m1</code> and <code>m2</code>, implement the following:
+                    <ul>
+                        <li><code>m1 + m2</code> (Addition) - Add the dollars and cents of two money objects and return a new one.</li>
+                        <li><code>m1 += m2</code> (Add onto) - Add the dollars and cents of the item on the right (the parameter) to the item of the left (the current object) and return a reference to it.</li>
+                        <li><code>++m1</code> (Pre-increment) - Add one cent to the provided money object (and return a reference to the current object).</code></li>
+                    </ul>
+                </li>
+                <li>Note that if the value of cents ever exceeds 100, that amount should roll over into the dollars. There is a function <code>handleOverflow()</code> provided for you that contains this logic. You should call it where appropriate.</li>
+                <li>Fill in the main function (in check12b.cpp) to use your operators as noted.</li>
+            </ol>
+
+        <h2>Sample Output</h2>
+        <p>
+            The following is an example of output for this program:
+        </p>
+<div class="code">
+Dollars: <span class="user-input">10</span>
+Cents: <span class="user-input">67</span>
+Dollars: <span class="user-input">11</span>
+Cents: <span class="user-input">67</span>
+
+The original values are: $10.67 and $11.67
+After doing account1 += account2, the value of account1 is: $22.34
+From account1 + account2, the value of account3 is: $34.01
+After ++account1, the value of account1 is: $22.35
+</div>
+
+
+        <p>Another example would be:</p>
+<div class="code">
+Dollars: <span class="user-input">10</span>
+Cents: <span class="user-input">85</span>
+Dollars: <span class="user-input">1</span>
+Cents: <span class="user-input">14</span>
+
+The original values are: $10.85 and $1.14
+After doing account1 += account2, the value of account1 is: $11.99
+From account1 + account2, the value of account3 is: $13.13
+After ++account1, the value of account1 is: $12.00
+</div>
+
+        <h2>Testbed</h2>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+        <p>Please note that it is possible to do this assignment without overloading the operators as member functions, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.
+        </p>
+
+        <h2>Helpful commands</h2>
+<div class="code">
+tar -cf check12b.tar makefile *.h *.cpp
+testBed cs165new/check12b check12b.tar
+submit check12b.tar
+</div>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
