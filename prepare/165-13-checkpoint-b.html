@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Checkpoint</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>13 Prepare : Checkpoint B - The Rule of Three</h1>
+
+
+        <p>After completing (or <i>while</i> completing) the <a href="165-13-prepare.html">preparation material</a> for this week, complete the following exercise.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            This checkpoint is intended to help you practice the syntax of copy constructors, assignment operators, and destructors. You will build on your work from Checkpoint A.
+        </p>
+
+        <p>The Rule of 3 for C++ states that copy constructors, assignment operators, and destructors almost always go together. Whenever you have need to implement one of them, you should also implement the other two.</p>
+
+        <p>This is true for our example from Checkpoint 13A. We were using a dynamically allocated array, therefore we needed to de-allocate it in the destructor. This is correct. However, for the same reason that we needed a destructor (we had dynamically allocated memory), we will also have problems if we try to copy our object. Rather than the new NumberList getting it's own array full of numbers, it will point to the memory of the first one. So if you change one of them, it will affect both. Thus, we need to provide this copy functionality to allocate another array and copy each number over.</p>
+
+        <h2>Instructions</h2>
+
+        <p></p>
+
+        <p>You are provided with the same NumberList class from Checkpoint A. However, this time, there is a different main function that tests it.</p>
+
+        <p>Your task is to fill complete a copy constructor and an assignment operator to properly allocate and copy over the array of numbers. You should also have a destructor (that you implemented in Checkpoint A).</p>
+
+            <ol>
+                <li>Copy the provided code:</li>
+
+
+<div class="code">
+mkdir check13b
+cd check13b
+
+cp /home/cs165new/check13b/* .
+</div>
+                <li>Then you can copy over your numberList files from Checkpoint A if you would like, so you don't have to implement the destructor again:</li>
+
+
+<div class="code">
+// Assuming there is a sibling directory named "check13a"
+// that has the files you want.
+
+cd check13b  // if you are not already there
+cp ../check13a/numberList.* .
+</div>
+
+
+
+                <li>Implement a copy constructor for the NumberList It should:</li>
+                <ol>
+                    <li>Set the size of the new list to be the same as the other one</li>
+                    <li>Dynamically allocate an array of that size.</li>
+                    <li>Copy over each value (one by one) from the array of the original NumberList to our new one.</li>
+                </ol>
+
+                <li>Implement an assignment operator. It should:</li>
+                <ol>
+                    <li>Check to see if the array is already allocated, and if so, delete it.</li>
+                    <li>Then, do the exact same things as the copy constructor</li>
+                    <li>Finally return a reference to the current object.</li>
+                </ol>
+
+                <li>A main function is provided for you that will create and use some NumberList objects and make copies of them. You should not change this function. All you need to do is add the copy constructor and assignment operator mentioned above.</li>
+            </ol>
+
+
+        <h2>Testbed</h2>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+        <p>Please note that it is possible to do this assignment without using copy constructors and assignment operators, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.
+        </p>
+
+        <h2>Helpful commands</h2>
+<div class="code">
+tar -cf check13b.tar makefile *.h *.cpp
+testBed cs165new/check13b check13b.tar
+submit check13b.tar
+</div>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
