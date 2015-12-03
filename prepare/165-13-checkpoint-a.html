@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Checkpoint</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>13 Prepare : Checkpoint A - Destructors</h1>
+
+
+        <p>After completing (or <i>while</i> completing) the <a href="165-13-prepare.html">preparation material</a> for this week, complete the following exercise.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            This checkpoint is intended to help you practice the syntax of destructors. You will work with a class that stores an array of integers of some specified size.
+        </p>
+
+        <h2>Instructions</h2>
+
+        <p>You are provided with a main function, and the start of the NumberList class. This class will store a dynamically allocated array of integers, and then provides a getNumber function to return the value at any index in this array, and a setNumber to set one.</p>
+
+        <p>Your task is to fill in a non-default constructor and a destructor for the class.</p>
+
+        <div class="class-diagrams">
+            <table class="table-class-diagram">
+                <tr><th>NumberList</th></tr>
+                <tr><td>-array : int*</td></tr>
+                <tr><td>-size : int</td>
+                </tr>
+                <tr class='class-diagram-spacer'><td></td></tr>
+                <tr><td>+NumberList(size)</td></tr>
+                <tr><td>+~NumberList()</td></tr>
+                <tr><td>+getNumber(index) : int</td></tr>
+                <tr><td>+setNumber(index, value) : void</td></tr>
+                <tr><td>+displayList() : void</td></tr>
+            </table>
+        </div>
+
+            <ol>
+                <li>Copy the provided code:</li>
+
+
+<div class="code">
+mkdir check13a
+cd check13a
+
+cp /home/cs165new/check13a/* .
+</div>
+
+                <li>Implement a non-default constructor that accepts an integer for the size of the number list. It should:</li>
+                <ol>
+                    <li>Dynamically allocate an array of that size.</li>
+                    <li>Save the size in the member variable named, "size".</li>
+                    <li>Fill in a default value of 0 for each spot in the array.</li>
+                </ol>
+
+                <li>Implement a destructor that frees up the memory of the array. It should:</li>
+                <ol>
+                    <li>Delete the dynamically allocated array.</li>
+                    <li>Set the array pointer to be NULL.</li>
+                    <li>Output a message that says, "Freeing memory". Note that we normally wouldn't output a message like this in a destructor, but this informs the testbed that you are using your destructor.</li>
+                </ol>
+
+                <li>A main function is provided for you that will create and use some NumberList objects. You should not change this function. All you need to do is add the constructor and destructor mentioned above.</li>
+            </ol>
+
+
+        <h2>Testbed</h2>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+        <p>Please note that it is possible to do this assignment without using a destructor, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.
+        </p>
+
+        <h2>Helpful commands</h2>
+<div class="code">
+tar -cf check13a.tar makefile *.h *.cpp
+testBed cs165new/check13a check13a.tar
+submit check13a.tar
+</div>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
