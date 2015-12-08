@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Team Activity</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+        <h1>13 Teach : Team Activity - The Rule of Three</h1>
+
+
+        <p>This activity is designed to be completed during class.
+        </p>
+
+        <h1>Overview</h1>
+        <p>This activity will help you practice the syntax of copy constructors, assignment operators, and destructors.</p>
+
+        <p>Your assignment is to implement each of these for a Course class that contains a dynamically allocated array of Students.</p>
+
+        <h1>Instructions</h1>
+        <p>Divide your teams into groups of 2-3. You should all work together on one laptop, then make sure everyone in your team gets a copy of the work that you complete.</p>
+
+        <p>Begin with the code at: <code>/home/cs165new/ta13/*</code></p>
+
+        <p>This code includes the following two classes:</p>
+
+        <div class="class-diagrams">
+            <table class="table-class-diagram">
+                <tr><th>Course</th></tr>
+                <tr><td>-name : string</td></tr>
+                <tr><td>-classList : Student*</td></tr>
+                <tr><td>-size : int</td></tr>
+                <tr class='class-diagram-spacer'><td></td></tr>
+                <tr><td>+getName() : string</td></tr>
+                <tr><td>+setName(string) : void</td></tr>
+                <tr><td>+getSize() : int</td></tr>
+                <tr><td>+setSize(int) : void</td></tr>
+                <tr><td>+getStudent(int index) : Student</td></tr>
+                <tr><td>+setStudent(int index, const Student &amp;) : void</td></tr>
+                <tr><td>+displayList(Student) : void</td></tr>
+            </table>
+            <table class="table-class-diagram">
+                <tr><th>Student</th></tr>
+                <tr><td>id : int</td></tr>
+                <tr><td>name : string</td></tr>
+                <tr class='class-diagram-spacer'><td></td></tr>
+                <tr><td>+getId() : int</td></tr>
+                <tr><td>+getName() : string</td></tr>
+                <tr><td>+setId(int) : void</td></tr>
+                <tr><td>+setName(string) : void</td></tr>
+                <tr><td>+display() : void</td></tr>
+            </table>
+        </div>
+
+        <p>Notice that because a Course has a dynamically allocated array, it needs a destructor, a copy constructor, and an overloaded assignment operator.</p>
+
+        <h2>Core Requirements</h2>
+
+
+        <ol>
+            <li>Implement a constructor that takes an integer for the size. It should set the size member variable and then allocate the array of Students to that size. Then, implement the <code>getStudent</code> and <code>setStudent</code> methods of the Course class that should get and set students at the specified index (e.g., <code>setStudent(3, john)</code> should set <code>john</code> to be at index 3 in the array).</li>
+
+            <li>Implement a destructor for the Course class that deallocates the array. Then, display a message, "Cleaning up course: [course-name]". Please note that in practice we would not actually output a message when cleaning up a message, but while practicing this helps us see that it is actually being called.</li>
+
+            <li>Implement a copy constructor for the Course class that performs a deep copy (i.e., allocates a new array and copies each student over). Also, overload the assignment operator for the Course class to perform a deep copy.</li>
+        </ol>
+
+        <p>When you complete these requirements, show your code to your instructor to "pass it off."</p>
+
+        <h2>Stretch Challenges</h2>
+        <p> After completing the above steps. Make sure that everyone on the entire team is to this point and understands the material. Then, if you have time, move onto the following stretch challenges.</p>
+
+        <p></p>
+
+        <ol>
+            <li>Overload the output operator for both <code>Student</code> and <code>Course</code>. Remove the display functions for each and replace any references to it with calls to your output operator.</li>
+            <li>Change the <code>Student</code> class to use a dynamically allocated <code>char[]</code> for the name instead of a object of the <code>string</code> class. Leave the parameters and the return type of getName and setName as they were, but change the bodies of these functions to convert between the character array and the string data types.</li>
+            <li>Because the <code>Student</code> class now has dynamically allocated data, implement a destructor, copy constructor, and assignment operator for it as well. See if you can add something to the driver program to test that your code is working the way you expect.</li>
+        </ol>
+
+        <h1>Submission</h1>
+        <p>You do not need to submit your program (just make sure that everyone has a copy of it for their reference). Instead, answer the accompanying questions in the I-Learn quiz.</p>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
