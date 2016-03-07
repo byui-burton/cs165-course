@@ -187,6 +187,13 @@ float dy = BULLET_SPEED * (sin(M_PI / 180.0 * angle));
         <li>Finding collisions between fast-moving objects can be a little tricky, especially if you consider that they may technically collide between frames. To detect that case, you need to look at small steps between the frames and check for collision at each of these points. The following function may be helpful to you in getting the closest distance between two objects at any point during the frames:</li>
 
 <div class="code">
+// The getClosestDistance function requires these includes:
+#include <limits>
+#include <algorithm>
+using namespace std;
+</div>
+
+<div class="code">
 /**********************************************************
  * Function: getClosestDistance
  * Description: Determine how close these two objects will
