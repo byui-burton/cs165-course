@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Checkpoint</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>11 Prepare : Checkpoint B - Class Templates</h1>
+
+
+        <p>After completing (or <i>while</i> completing) the <a href="165-11-prepare.html">preparation material</a> for this week, complete the following exercise.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            This checkpoint is intended to help you practice the syntax of class templates.
+        </p>
+        <p>
+            It is often convenient to have a pair of items stored together (e.g., you want to have a combination of a string and an integer as the key or value of a map). For this exercise, you will create a <code>Pair</code> class, that is a template class allowing any two data types to be the data type of the first and second items in the pair.
+        </p>
+       
+        <h2>Instructions</h2>
+
+        <ol>
+            <li><p>Start by copying the provided code:</p>
+<div class="code">
+mkdir check11b
+cd check11b
+cp /home/cs165new/check11b/* .
+</div>
+
+            <p>This code contains the following</p>
+            <ul>
+                <li>makefile - A simple makefile for this checkpoint</li>
+                <li>check11b.cpp - Contains a main function to test your <code>Pair</code> class. You should not need to change this function.</li>
+                <li>pair.h - This is where you will create your pair class. Please note that for template classes, you put the method bodies right in the .h file, rather than separating them out into a .cpp file.</li>
+            </ul>
+
+            </li>
+
+            <li>Create the <code>Pair</code> class. It should be a template class with two potentially different data types as the parameters.</li>
+
+            <li>For the <code>Pair</code> class create the following methods:
+                <ul>
+                    <li><code>getFirst()</code> - returns the first item</li>
+                    <li><code>setFirst(value)</code> - sets the first item to the provided value.</li>
+                    <li><code>getSecond()</code> - returns the second item</li>
+                    <li><code>setSecond(value)</code> - sets the second item to the provided value</li>
+                </ul>
+            </li>
+
+            <li>Implement a <code>display()</code> function on the <code>Pair</code> class that displays the two parts of the object in the format "<code>first - second</code>"</li>
+
+        </ol>
+
+        <h2>Sample Output</h2>
+        <p>
+            The following is an example of output for this program:
+        </p>
+<div class="code">
+Please enter a first name: <span class="user-input">Eliza</span>
+Please enter a last name: <span class="user-input">Snow</span>
+The first name is: Eliza
+The last name is: Snow
+The complete pair is: Eliza - Snow
+
+Please enter a number: <span class="user-input">42</span>
+Please enter a another number: <span class="user-input">314</span>
+The first number is: 42
+The last number is: 314
+The complete pair is: 42 - 314
+
+Please enter a name: <span class="user-input">James</span>
+Please enter a score: <span class="user-input">97</span>
+The name is: James
+The score is: 97
+The complete pair is: James - 97
+</div>
+
+
+        <h2>Testbed</h2>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+        <p>Please note that it is possible to do this assignment without using class templates, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.
+        </p>
+
+        <h2>Helpful commands</h2>
+<div class="code">
+tar -cf check11b.tar makefile *.h *.cpp
+testBed cs165new/check11b check11b.tar
+submit check11b.tar
+</div>
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
