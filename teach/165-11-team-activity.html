@@ -39,6 +39,8 @@
                         <p>
                             <code>_data = new int[5];</code>
                         </p>
+                        <p>In your constructor, set the <code>_capacity</code> member variable to the number of items the bag <em>can</em> hold. (5 in this case).
+                        </p>
                     </li>
                     <li><code>getCount()</code> - Returns the number of ints in the bag.</li>
                     <li><code>getCapacity()</code> - Returns the number of ints the bag <em>can</em> hold.</li>
@@ -51,9 +53,7 @@
 
             <li><p>Change the code in <code>addItem</code> so that the bag automatically resizes to accomodate more than 5 items:</p>
                 <ol>
-                    <li><p>In your constructor, set the <code>_capacity</code> member variable to the number of items the bag <em>can</em> hold. (5 in this case).
-                    </li>
-                    <li>Modify the <code>addItem()</code> method. If <code>_size</code> is equal to <code>_capacity</code>, create a new dynamically allocated array of ints, use a for loop to copy all of the items from the old array to the new array, and then delete the old array, then add the new item.</li>
+                    <li>Modify the <code>addItem()</code> method. If <code>_size</code> is equal to <code>_capacity</code>, create a new dynamically allocated array of ints twice the size of the previous one (don't forget to update <code>_capacity</code>) use a for loop to copy all of the items from the old array to the new array, and then delete the old array, then add the new item.</li>
                 </ol>
                 <p>Uncomment the code in ta11.cpp labeled as /*PART II*/ to test your progress.</p>
             </li>
