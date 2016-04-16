@@ -386,3 +386,14 @@ p code, li code {
 	color: #f8f8f8;
 }
 
+/*div.online-notes:before {
+	content: "Online Students -- Special Instructions: ";
+}
+*/
+div.online-notes {
+  background-color: rgb(230, 230, 230);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;	
+}
