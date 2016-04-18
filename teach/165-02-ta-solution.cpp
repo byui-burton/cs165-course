@@ -22,6 +22,7 @@ struct Scripture
    int chapter;
    int verse;
 };
+
 /*****************************************************
  * Function: promptScripture
  * Description: Prompts the user for the parts of a scripture.
@@ -38,7 +39,6 @@ void promptScripture(Scripture & scripture)
    cin >> scripture.verse;
 }
 
-
 /*****************************************************
  * Function: displayScripture
  * Description: Displays a scripture on the screen.
@@ -49,7 +49,6 @@ void displayScripture(const Scripture & scripture)
    cout << scripture.chapter << ":" << scripture.verse;
    cout << endl;
 }
-
 
 /*****************************************************
  * Function: main
