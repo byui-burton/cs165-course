@@ -1,6 +1,6 @@
 /***************************************************************
  * File: ta04.cpp
- * Author: (your name here)
+ * Author: Br. Burton
  * Purpose: Contains the main function to test the Rational class.
  ***************************************************************/
 
@@ -13,13 +13,14 @@ using namespace std;
 int main()
 {
    // Declare your Rational object here
-   
+   Rational fraction;   
 
    // Call your prompt function here
-
+   fraction.prompt();
 
    // Call your display functions here
-
+   fraction.display();
+   fraction.displayDecimal();
 
    return 0;
 }
