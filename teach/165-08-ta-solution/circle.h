@@ -29,7 +29,7 @@ public:
    void setRadius(float radius) { this->radius = radius; }
 
    /************************************************************
-    * promptForCircle
+    * Circle :: promptForCircle
     *
     * Promps the user for the X and Y coordinates of the center
     * as well as the radius and sets them.
