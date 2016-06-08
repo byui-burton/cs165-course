@@ -28,7 +28,7 @@ void Circle :: display() const
    // we want the point one here.
    Point::display();
 
-   cout << " - Radius: 3";
+   cout << " - Radius: " << radius;
 }
 
 
