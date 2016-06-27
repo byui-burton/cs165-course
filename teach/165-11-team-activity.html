@@ -15,37 +15,33 @@
         <article>
         <h1>11 Teach : Team Activity - Templates</h1>
 
-
-        <p>This activity is designed to be completed during class.
-        </p>
-
         <h1>Overview</h1>
         <p>This activity will help you practice the syntax of class templates. You will create a vector-like container, which we'll call a <a href="https://en.wikipedia.org/wiki/Bag_of_holding" target="_blank">bag of holding.</a> This container will start with a fixed size, and automatically grow as needed. It will use a dynamically allocated array to actually store items.</p>
 
         <h1>Instructions</h1>
-        <p>Divide your teams into groups of 2-3. You should all work together on one laptop, then make sure everyone in your team gets a copy of the work that you complete.</p>
+        <p>Your team should all work together on one program, then make sure everyone in your team gets a copy of the work that you complete.</p>
 
-        <p>You will begin with the files in /home/cs165new/ta11. The provided files include: bag.h, bag.cpp, and ta11.cpp.</p>
+        <p>You will begin with the files in /home/cs165new/ta11 . The provided files include: bag.h and ta11.cpp.</p>
         
         <h2>Core Requirements</h2>
         <ol>
 
             <li>
-                <p>Create a bag of holding that only works with integers by supplying the following methods in bag.cpp:</p>
+                <p>Create a bag of holding that only works with integers by supplying the bodies of the following methods:</p>
                 <p>
                 <ol>
                     <li><p><code>default constructor</code> - Creates a bag that can hold 5 ints.</p>
                         <p>The constructor should dynamically allocate an array of 5 ints:</p>
                         <p>
-                            <code>_data = new int[5];</code>
+                            <code>data = new int[5];</code>
                         </p>
-                        <p>In your constructor, set the <code>_capacity</code> member variable to the number of items the bag <em>can</em> hold. (5 in this case).
+                        <p>In your constructor, set the <code>capacity</code> member variable to the number of items the bag <em>can</em> hold. (5 in this case).
                         </p>
                     </li>
                     <li><code>getCount()</code> - Returns the number of ints in the bag.</li>
                     <li><code>getCapacity()</code> - Returns the number of ints the bag <em>can</em> hold.</li>
                     <li><code>getItem(int index)</code> - Returns the int at the specified index.</li>
-                    <li><code>addItem(int value)</code> - Adds an int to the bag. Every time you add an item to the bag, you'll need to update the <code>_currentAddIndex</code> variable so that you know where to insert the next item.</li>
+                    <li><code>addItem(int value)</code> - Adds an int to the bag. Every time you add an item to the bag, you'll need to update the <code>currentAddIndex</code> variable so that you know where to insert the next item.</li>
                 </ol>
                 </p>
                 <p>Use the code in ta11.cpp to test your progress.</p>
@@ -53,13 +49,14 @@
 
             <li><p>Change the code in <code>addItem</code> so that the bag automatically resizes to accomodate more than 5 items:</p>
                 <ol>
-                    <li>Modify the <code>addItem()</code> method. If <code>_size</code> is equal to <code>_capacity</code>, create a new dynamically allocated array of ints twice the size of the previous one (don't forget to update <code>_capacity</code>) use a for loop to copy all of the items from the old array to the new array, and then delete the old array, then add the new item.</li>
+                    <li>Modify the <code>addItem()</code> method. If <code>size</code> is equal to <code>capacity</code>, create a new dynamically allocated array of ints twice the size of the previous one (don't forget to update <code>capacity</code>) use a for loop to copy all of the items from the old array to the new array, and then delete the old array, then add the new item.</li>
                 </ol>
                 <p>Uncomment the code in ta11.cpp labeled as /*PART II*/ to test your progress.</p>
             </li>
 
             <li><p>Modify the bag.h and bag.cpp to be a class template, making sure that you only replace the instances of <code>int</code> that are appropriate.</p>
                 <p>Uncomment the code in ta11.cpp labeled as /*PART III*/ to test your progress.</p>
+                <p>Don't forget that with this change you'll also need to change the name of the data structure in Parts I and II to now be <code>Bag&lt;int&gt;</code> rather than just <code>Bag</code>.</p>
             </li>
         </ol>
 
@@ -67,15 +64,20 @@
         <p> After completing the above steps. Make sure that everyone on the entire team is to this point and understands the material. Then, if you have time, move onto the following stretch challenges.</p>
 
         <ol>
-            <li>Make it possible to search your bag of holding for a value. (Test with /*STRETCH I*/ in ta11.cpp</li>
-            <li>Make it possible to delete from your bag of holding. (Test with /*STRETCH II*/ in ta11.cpp</li>
+            <li>Make it possible to search your bag of holding for a value. (Test with /*STRETCH I*/ in ta11.cpp)</li>
+            <li>Make it possible to delete from your bag of holding. (Test with /*STRETCH II*/ in ta11.cpp)</li>
             <li>Add a destructor to your bag of holding to clean up your dynamically allocated array.</li>
         </ol>
 
+        <h1>Instructor's Solution</h1>
+        <p>As a part of this team activity, you are expected to look over a solution from the instructor, to compare your approach to that one. One of the questions on the I-Learn submission will ask you to provide insights from this comparison.</p>
+
+        <p>Please DO NOT open the solution until you have worked through this activity as a team for the one hour period. At the end of the hour, if you are still struggling with some of the core requirements, you are welcome to view the instructor's solution and use it to help you complete your own code. Even if you use the instructor's code to help you, you are welcome to report that you finished the core requirements, if you code them up yourself.</p>
+
+        <p>After working with your team for the one hour activity, <a href="https://github.com/byui-burton/cs165-course/tree/master/teach/165-11-ta-solution" target="_BLANK">click here for the instructor's solution</a>.</p>
+
         <h1>Submission</h1>
         <p>You do not need to submit your program (just make sure that everyone has a copy of it for their reference). Instead, answer the accompanying questions in the I-Learn quiz.</p>
-
-
 
         </article>
     </div>
