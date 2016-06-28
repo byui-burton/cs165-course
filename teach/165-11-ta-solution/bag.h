@@ -16,6 +16,7 @@ class Bag
 
 	public:
 		Bag(); // Default constructor
+		~Bag(); // Destructor to free any memory
 				
 		// Getters
 		int getCapacity() const { return capacity; }
@@ -35,6 +36,16 @@ Bag<T>::Bag()
 	capacity = 5;
 	size = 0;
 	currentAddIndex = 0;
+}
+
+template<class T>
+Bag<T>::~Bag()
+{
+	if (data != NULL)
+	{
+		delete[] data;
+		data = NULL;
+	}
 }
 
 template<class T>
