@@ -15,40 +15,17 @@
         <article>
         <h1>Useful Links</h1>
 
+        <p>Please refer to the <a href="https://content.byui.edu/file/cddfb9c0-a825-4cfe-9858-28d5b4c218fe/1/Course/124.Useful%20links.html" target="_BLANK">Useful Links</a> from CS 124. That page will give you information about how to get connected to the CS Department Linux System.</p>
 
-        <h3>Remote access using a Microsoft Windows computer</h3>
-        <p>Please see this link for information on how to access the Linux Lab from home. You will need to perform the following steps if you have a <b>Windows</b> machine:</p>
-        <ol>
-            <li>Download the tool called PuTTY <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></li>
-            <li>Go to the lab and read the IP address (four numbers separated by periods) from any machine in the lab. They are 157.201.194.201 through 157.201.194.210. This will be be virtual machine you are accessing when using remote access</li>
-            <li>Boot PuTTY and type in your IP address from step 2 and the port 215. You might want to save this session so you don't have to keep typing the numbers in.</li>
-            <li>Select [OPEN]. After you specify your username and password, you are now logged into that machine.</li>
-        </ol>
-        <h3>Remote access using an Apple Macintosh computer</h3>
-        <p>If you are on a <b>Macintosh </b>or a <b>Linux</b> computer, bring up a terminal window and type the following command:
-            <br /><code>ssh &lt;username&gt;@&lt;ip&gt; -p 215 -X2</code></p>
-        <p>If, for example, you want to connect to machine 157.201.194.230 and your username is "myUserName", then you would type</p>
-        <p style="padding-left: 30px;"><code>ssh myUserName@157.201.194.230 -p 215 -X2</code></p>
-        <p>There are several other tools available to Macintosh users:</p>
-        <ul>
-            <li>SSH: <a href="https://video.byui.edu/media/SSH/0_fg803qeq/21931002">Using the terminal shell</a></li>
-            <li>textWrangler: <a href="https://video.byui.edu/media/TextWrangler-Install/0_2ekga5ed/21931002">Installing</a>, <a href="https://video.byui.edu/media/textWrangler-Config/0_u9ig228b/21931002">configuring</a>, and <a href="https://video.byui.edu/media/textWrangler-Tips/0_gzu1n4ot/21931002">tips</a></li>
-            <li>Xcode: <a href="https://video.byui.edu/media/xCode-Download/0_9mxcigsv/21931002">Downloading</a>, <a href="https://video.byui.edu/media/xCode-AddingFiles/0_4tley8in/21931002">adding files</a>, and <a href="https://video.byui.edu/media/xCode-Setup/0_rq8hpxtu/21931002">setting up</a></li>
-            <li>cyberDuck: <a href="https://video.byui.edu/media/cyberDuck/0_6zolgzzf/21931002">Coping files to your hard disk</a>.</li>
-        </ul>
-        <hr />
-        <h3>Open GL and IDEs</h3>
-        <p>How to get OpenGL programs to compile on your own machine as well as how to use an IDE (Integrated Develoment Environment) for your Mac or PC:</p>
-        <ul>
-            <li><a href="./165-opengl.html">Setting up OpenGL and Graphics projects</a></li>
-        </ul>
-        <hr />
-        <h2>General Reference</h2>
-        <h3>C++ Reference manual</h3>
-        <p>Quick reference for all things C++.&nbsp; Great if your book is not handy. The reference section for the various libraries we use in class is the most useful. <a href="http://www.cppreference.com/" target="_blank">http://www.cppreference.com/</a>.</p>
-        <h3>Linux and Emacs Cheat-Sheet</h3>
-        <p>Some commonly used commands and keystrokes that &ldquo;will come in handy&rdquo; while writing programs on the Linux System. <a href="https://content.byui.edu/file/9823bc74-8fbe-429c-9059-49c074b5227b/1/Commands.pdf">Commands.pdf</a></p>
+        <p>A few special considerations as the Linux system has changed recently:</p>
 
+        <ul>
+            <li>The IP address range has changed to 157.201.194.201-210 (it was formerly 201-235).</li>
+            <li>If you use emacs with a client that passes through the graphics (e.g., Moba or Mac with the -X switch), it will open up a graphical version of emacs on your local system. This may be what you want, because it allows for use of the mouse, etc. But if you are away from campus, it will likely be very delayed. If you want to force emacs to open in the regular "console" way, you can use the "-nw" switch for "no window", such as: <code>emacs -nw assign01.cpp</code> .</li>
+            <li>Because the physical lab systems have changed, if you have previously connected to one of the systems in the 201-210 range, your computer will have remembered its fingerprint in it's known hosts list. Because the fingerprint has now changed, you will get a security warning, and will not be able to connect to it. This can be resolved by removing that line from your known hosts file or by picking a different IP address to which you have not previously connected.</li>
+        </ul>
+
+        <p>For information about how to configure your system for OpenGL and the graphics projects that we will work on later in the semester, see the page <a href="./165-opengl.html" target="_BLANK">Preparing for Graphics Projects</a>. But, note that you do not need to go through these steps until directed to, about half way through the semester.</p>
 
         </article>
     </div>
