@@ -22,6 +22,7 @@ Course::Course(int size)
 Course::Course(const Course & other)
 {
    // We can use our assignment operator to avoid duplicating code
+   classList = NULL;
    *this = other;
 }
 
@@ -29,6 +30,12 @@ Course& Course::operator=(const Course & other)
 { 
    name = other.name;
    size = other.size;
+
+   if (classList != NULL)
+   {
+      delete[] classList;
+      classList = NULL;
+   }
 
    classList = new Student[size];
 
