@@ -15,9 +15,16 @@
         <article>
         <h1>Preparing for Graphics Projects</h1>
         <p>This semester we will be using our programming tools to create some games that involve graphics. These graphics are rendered using OpenGL. Unfortunately, OpenGL cannot render through a PuTTY session, so we have to use a different option. There are several options that you can choose among, each one has different pros and cons. They are each presented here, and you can decide which is best for your situation.</p>
+        
         <p>In addition, your instructor may suggest a certain path for their students to keep as many people on the same page as possible. Please watch for their guidance.</p>
 
-        <h2>Option #1 - Use the Linux Lab</h2>
+        <p>Sometimes getting things up and going is a little tricky. Please reach out and help one another in this process. In addition, you can also consult these:</p>
+
+        <ul>
+            <li><p><a href="./165-opengl-common-errors.html">Common errors in OpenGL set up process</a></p></li>
+        </ul>
+
+<!--         <h2>Option #1 - Use the Linux Lab</h2>
         <p>If you are on campus in Rexburg, you can sit down and use the Linux Lab machines directly with no other considerations or setup issues.</p>
         <p>In other words, this does not mean that you are using PuTTY to remotely access the Linux Lab, but rather, you are physical present at one of the machines.</p>
 
@@ -35,8 +42,8 @@
 
         <p>Click <a href="./165-opengl-linux.html">here for instructions</a> on how to create and test a simple OpenGL project using the Linux Lab.</p>
 
-
-        <h2>Option #2 - Setup a Linux Virtual Machine on Your Laptop</h2>
+ -->
+        <h2>Option #1 - Setup a Linux Virtual Machine on Your Laptop</h2>
         <p>We have prepared a Linux virtual machine that you can download and set up on your laptop. This means you will have your own "Linux computer" running as "a program" on your own computer. You have complete admin rights on this "computer" and can play with it as much as you'd like. This is really cool! In fact, this is how a lot of development is done in industry today, because a company can set up an image of a virtual machine that a new developer can easily set up and use.</p>
         <p>For this option, you will need to download an install the virtual machine program itself, and then download a Linux image that we have set up for you. (Alternatively, you could download and install your own instance of Linux, which is great. The benefit to using ours is simply that it is pre-configured with all the tools you'll need.)</p>
         <p>You will then write your programs on your own laptop and use some tools in the virtual machine to copy them up to the Linux lab when it is time to submit.</p>
@@ -57,7 +64,7 @@
 
         <p>Click <a href="./165-opengl-vm.html">here for instructions</a> on how to setup a virtual machine for CS165.</p>
 
-        <h2>Option #3 - Use a Setup like PuTTY or MobaXTerm but Configure it to Enable Graphics</h2>
+        <h2>Option #2 - Use a Setup like PuTTY or MobaXTerm but Configure it to Enable Graphics</h2>
         
         <p>While the default configuration of PuTTY (or ssh on a Mac terminal) does not enable programs running in the Linux Lab to render graphics on your laptop, you can install and set up another program that works with PuTTY, called an X-Server. This requires a little more configuration in Windows than on a Mac (or Linux) to get to work properly, but can be done for both.</p>
         <p>A related approach for Windows users is to use an alternative to PuTTY called MobaXterm. It is like PuTTY but enables you to render graphics and use the mouse. It is very easy to install and also has an interface for copying files to and from the Linux lab.</p>
@@ -78,7 +85,7 @@
         <p>Click <a href="https://content.byui.edu/file/7e8609cb-3efc-47c5-937f-4bd44c4e711a/1/index.html">here for instructions</a> on how to set up MobaXTerm and also how to set up X forwarding on a Mac computer using SSH.</p>
         <p>Once you have your software configured, click <a href="./165-opengl-linux.html">here for instructions</a> on how to create and test a simple OpenGL project.</p>
 
-        <h2>Option #4 - Xcode (Mac users only)</h2>
+        <h2>Option #3 - Xcode (Mac users only)</h2>
         <p>Mac users can use Xcode, which is available for free and is a powerful IDE (Integrated Development Environment) used to develop real-world projects. It requires a some amount of configuration, but once running works very well. There are some changes that have to be made in the code. This means, that each week when an assignment is submitted, you must make sure to change these elements back to the way Linux expects them, and make sure your program runs correctly in that environment. Your instructor will expect it to work in Linux.</p>
         <ul>
             <li>Pros:</li>
@@ -95,7 +102,7 @@
         </ul>
         <p>Click <a href="./165-opengl-xcode.html">here for instructions</a> on how to setup Xcode for OpenGL development.</p>
 
-        <h2>Option #5 - Microsoft Visual Studio (Windows users only)</h2>
+        <h2>Option #4 - Microsoft Visual Studio (Windows users only)</h2>
         <p>Similar to Mac's Xcode, Microsoft has a very powerful IDE called Visual Studio. This is something that real developers use in industry on large projects. For many years students could obtain a free copy, and now, Microsoft has made the full version of their "community edition" available to anyone for free.</p>
         <p>Using Visual studio will require a large download, a significant amount of configuration, and then because you will have to change your code files somewhat to work in this environment, you will need to copy them to the Linux lab and make changes each week, ensuring that it works on the Linux lab before you submit. Your instructor will expect it to work in Linux.</p>
         <ul>
