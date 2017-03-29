@@ -27,7 +27,13 @@ Course::Course(const Course & other)
 }
 
 Course& Course::operator=(const Course & other)
-{ 
+{
+   // check for self-assignment
+   if(&other == this)
+   {
+      return *this;
+   }
+
    name = other.name;
    size = other.size;
 
