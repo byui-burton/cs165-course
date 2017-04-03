@@ -188,8 +188,8 @@ float dy = BULLET_SPEED * (sin(M_PI / 180.0 * angle));
 
 <div class="code">
 // The getClosestDistance function requires these includes:
-#include <limits>
-#include <algorithm>
+#include &lt;limits&gt;
+#include &lt;algorithm&gt;
 using namespace std;
 </div>
 
@@ -207,8 +207,8 @@ float Game :: getClosestDistance(const FlyingObject &obj1, const FlyingObject &o
    dMax = max(dMax, abs(obj2.getVelocity().getDy()));
    dMax = max(dMax, 0.1f); // when dx and dy are 0.0. Go through the loop once.
    
-   float distMin = std::numeric_limits<float>::max();
-   for (float i = 0.0; i <= dMax; i++)
+   float distMin = std::numeric_limits&lt;float&gt;::max();
+   for (float i = 0.0; i &lt;= dMax; i++)
    {
       Point point1(obj1.getPoint().getX() + (obj1.getVelocity().getDx() * i / dMax),
                      obj1.getPoint().getY() + (obj1.getVelocity().getDy() * i / dMax));
@@ -218,7 +218,7 @@ float Game :: getClosestDistance(const FlyingObject &obj1, const FlyingObject &o
       float xDiff = point1.getX() - point2.getX();
       float yDiff = point1.getY() - point2.getY();
       
-      float distSquared = (xDiff * xDiff) +(yDiff * yDiff);
+      float distSquared = (xDiff * xDiff) + (yDiff * yDiff);
       
       distMin = min(distMin, distSquared);
    }
