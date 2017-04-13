@@ -50,7 +50,7 @@
                             <li><code>getCity</code> / <code>setCity</code></li>
                             <li><code>getState</code> / <code>setState</code></li>
                             <li><code>getZip</code> / <code>setZip</code></li>
-                            <li><code>prompt</code> - Prompts for each of the four values</li>
+<!--                             <li><code>prompt</code> - Prompts for each of the four values</li> -->
                             <li><code>display</code> - Displays the address in the format:</li>
 <div class="code">
 street
@@ -74,7 +74,7 @@ city, state zip
                         <ul>
                             <li><code>getName</code> / <code>setName</code></li>
                             <li><code>getAddress</code> / <code>setAddress</code></li>
-                            <li><code>prompt</code> - Prompts for the name, then calls the address's prompt method.</li>
+<!--                             <li><code>prompt</code> - Prompts for the name, then calls the address's prompt method.</li> -->
                             <li><code>display</code> - Displays the name, then calls the address's display method. Thus the format is:</li>
 <div class="code">
 name
@@ -123,7 +123,15 @@ name
 street
 city, state zip
 </div>                            
-                            <li><code>displayReceipt</code> - Displays the customers name followed by the displayReceipt information from the product, in this format (substituting for the correct values):</li>
+
+                            <li><code>displayInformation</code> - Displays the customer's name, the product's name, and the total price of the order in this format (substituting for the correct values):</li>
+<div class="code">
+customerName
+productName
+Total Price: $xx.xx</div>                            
+
+<!-- 
+                            <li><code>displayReceipt</code> - Displays the customer's name followed by the displayReceipt information from the product, in this format (substituting for the correct values):</li>
 <div class="code">
 customerName
 productName
@@ -131,6 +139,8 @@ productName
   Sales tax:     $    x.xx
   Shipping cost: $    x.xx
   Total:         $   xx.xx</div>                            
+
+ -->
                         </ul>
                         It should also have the following constructors:
 
