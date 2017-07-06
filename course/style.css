@@ -369,7 +369,7 @@ pre code {
 	line-height: 1.4em;
 	margin: 2em auto;
 	padding: 2em;
-	border: 1px solid #CCC;
+	/*border: 1px solid #CCC;*/
 }
 
 p code, li code {

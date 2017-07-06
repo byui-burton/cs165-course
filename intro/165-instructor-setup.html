@@ -20,8 +20,141 @@
 
         <p>This document outlines the various items that must be done by the instructor to set up the Linux Lab and other similar items for the semester.</p>
 
+
+<h2>Course Overview</h2>
+<p>In this course, the students learn object-oriented principles via C++ in Linux. It is a fun class for the students, because they now have enough expertise to solve more interesting problems than in CS 124.</p>
+
+<p>The course is organized in a weekly model where, each week, the students are expected to read material from the textbook (A PDF version is available for free via the I-Learn site, or they can buy from the bookstore). Then, they practice the mechanics of the reading with two straightforward “checkpoint” assignments. These are not designed to be problem solving experiences, but rather simply practicing the syntax they are reading about. These are due on Tuesday and Wednesday every week, and are pass/fail, based on an auto-grading test script that the students can have access to, so their should be no surprises.</p>
+
+<p>For further practice with the mechanics, the students are also organized into teams of 3 and complete a synchronous team activity designed to be similar to the checkpoints, and last an hour. Online students fill out a survey the first week of the semester about availability to help us assign them into teams (and we can change them throughout the semester if needed). Once in teams, online students are expected to coordinate their own schedules for this 1 hour meeting before Thursday night every week and use Skype/Google Hangouts, or whatever technology they prefer. Face to Face students complete this activity in class every Wednesday. The solution for each of these team activities is provided to the students and they fill out a self-assessment quiz to report on their progress. Please note that there are 3 questions about lessons learned that require you to “grade" them. I always award full points for anything entered here, and use it as a chance to address questions the class has about the topic.</p>
+
+<p>After learning the mechanics, the students use their new skills in a larger problem solving assignment each week, due every Monday night at midnight (Tuesday then begins the new topic). This gives them a chance to work on Saturday, and if not quite finished, they can ask some final questions on Monday before wrapping up and submitting. These weekly assignments are the meat of the course. For the first 5 weeks or so, they are console based, and fairly independent. After that, they switch to games that use graphics, and multiple weekly assignments build on each other to complete a larger project. In these cases, the “milestone” assignments are worth a much smaller amount of points than the final deliverable, but give us a chance to give feedback to the students along the way, and help them to keep themselves on task.</p>
+
+<p>In addition to the above, online students are expected to actively participate in the developer’s forum (discussion board) and are awarded points for asking and answering questions. There is no final exam for the online students.</p>
+
+<p>Face to face students do not have a requirement for discussion board participation, and have a final exam at the end of the semester.</p>
+
+<h2>Participation in the Discussion Forums (Online Sections)</h2>
+<p>— Please see this in the existing in instructor notes as it has not changed.</>
+
+<h2>Infrastructure</h2>
+<p>This course uses the CS department linux system (known affectionately as “The Linux Lab”). In the past, F2F students could walk in and work at these computers directly, but then all students could also remotely log in. Starting this semester, there will be no physical access to these linux systems, so all students will use the remote login option.</p>
+
+<p>By virtue of teaching a CS course, you should have an account created in this system with Faculty level access. Please let me know if you need help logging in. Once logged in, you will have a home directory such as:</p>
+
+<pre><code class="bash">/home/burtons</code></pre>
+
+<p>Please be aware that by default, new files and directories created by faculty have 755 permissions, so if you want to hide things from students you’ll need to chmod them.</p>
+
+<p>Common material in the lab is in a few places:</p>
+
+<ul>
+    <li><p>/home/cs165 – This directory contains material pertaining to the old assignments, and also examples and demos from the textbook.</p></li>
+    <li><p>/home/cs165new – This directory contains material pertaining to the new assignments, and will be referenced by the material in I-Learn.</p></li>
+    <li><p>/home/cs165new/faculty – This directory is not visible to the students (please don’t share this with them directly), but contains my solutions to most all of the assignments.</p></li>
+</ul>
+
+<h2>Graphics Infrastructure</h2>
+<p>When we switch to the graphics projects, we use OpenGL, and provide the students a wrapper around the library, so they call very simply functions like “drawShip” passing it a point. The course materials outline the different options students have for development (Visual Studio, xCode, a Linux VM) and how to setup and configure each one. They are still expected to copy their code to the linux system and compile and submit it there at the end of each week.
+</p>
+
+<h2>Initial Semester Setup</h2>
+<p>Beneath your home directory, you’ll need a directory “cs165" to which all of the students files will be submitted. To set up this directory, log into the linux system, create a blank subdirectory named “cs165” if it is not already present, change to that directory and run the command “newSemester”.
+</p>
+
+<p>This utility will create the directories needed for all of the assignments, and will also archive any existing files from past semesters. You should now see the following directories:
+</p>
+
+<pre><code>
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 assign01
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 assign02
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 assign03
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 assign04
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 assign05
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check01a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check01b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check02a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check02b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check03a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check03b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check04a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check04b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check05a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check05b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check06a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check06b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check07a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check07b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check08a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check08b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check09a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check09b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check10a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check10b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check11a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check11b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check12a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check12b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check13a
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 check13b
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 milestone06
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 milestone08
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 milestone10
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 milestone11
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 milestone12
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 prj07
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 prj09
+drwxr-x---.  4 burtons faculty 4096 Sep  1 11:28 prj13
+
+</code></pre>
+
+<p>Next, you need to set up a classlist for the students registered for your section. This is done by running the “classList” utility in the cs165 subdirectory. You then select the appropriate section from the options presented, and a “class” file will be added to your directory. This contains the username, email address, and full name of each student that will be used by the auto-grading processes described below. You will need to re-run the “classList” utility periodically especially early on in the semester when students are adding and dropping. Using the –u flag (e.g., “classList –u”) will update the existing list, and show you the additions/removals that are made. (Please note that the classList database does not get refreshed for the next semester until a few days before the semester begins.)</p>
+
+
+<h2>Submitting and Processing assignments</h2>
+<h3>Checkpoints</h3>
+<p>When students submit their assignments, they will automatically show up in the appropriate subdirectory under your cs165 dir. Checkpoint assignments are all auto-graded and are pass/fail. To grade them, you use the “process” utility.
+</p>
+
+<p>Change to the directory in question: (e.g., /home/burtons/cs165/check03a/ ), then simply type “process” to go through and grade all of those assignments for your students. Please note, there are default settings for each of the types of assignments. The settings for an assignment can be seen before running process by running “configTest”. Then various flags can be turned on or off as per the utilities. For example, to cause an email to be sent to each student with the resuts, you can run “process –e” or to turn the email flag off, you can run “process –E”. By default, checkpoints have the following flags (seen by running configTest in that directory):</p>
+
+<pre><code>
+X                  Move the assignment to a sub-directory
+X (cs165new/check03a) Run testBed
+X                  Grade a file, writing to grades.txt
+X                  E-mail the results of the testBed run
+X                  Bring everything together into a .log file
+</code></pre>
+
+
+<p>The result of that is that students get an email letting them know the status of their testBed run, and you have a grades.txt file with the results of the classes work in there.</p>
+
+<p>The process utility also excepts an argument of which file to run on (e.g., “process burtons.cpp", so you can run it on a single submission, and the grades.txt file will be updated to include the new submissions. This is convenient for processing late assignments. By default, the utility will expect a solution for every student in the aforementioned “class” file, and will email those that did not submit one.</p>
+
+<p>Once the checkpoints have been processed, you can create a .csv file in the format of I-Learn, to easily import the scores to the gradebook. This is done by running the “collect165” utility in that assignment’s directory. It parses the grades.txt file and formats it for I-Learn 3. Then, using a scp client of your choice, you copy the files to your local machine, browse to the gradebook in I-Learn, and import the .csv.</p>
+
+<h3>Weekly Assignments</h3>
+<p>The larger weekly assignments are also submitted to your directory in the linux system, but are not pass/fail. Instead the process command, will compile all of submissions and generate an HTML file for each student containing all of their source code (especially helpful for mult-file assignments). Some of these assignments (weeks 1-5) also have a testBed that is run, and those results are at the end of the HTML file.</p>
+
+<p>You can assign scores to the assignments as you see fit (out of 100), but I will provide the general rubric that I use for each. It is important to grade these quickly so the students receive timely feedback on their work. How you provide the feedback to them is up to you. Some instructors like to open the HTML document in MS Word, and annotate it using the comments feature. Then save a PDF version of the document and email it to the students. This can be a great way to provide specific feedback on various sections of code.</p>
+
+<p>Other instructors prefer to list specific comments in the feedback section in I-Learn. However you choose to provide feedback, you need to make sure to input the scores into the gradebook in I-learn.</p>
+
+<h2>Late Work</h2>
+<p>Each instructor can select the late work policy they would like. Please make sure this is communicated clearly to your students.</p>
+
+<p>I accept late checkpoints for 50% credit until the end of that week, then 0% afterward (although I don’t hold too firm to this if I have a student that wants to get caught back up)</p>
+<p>I accept late assignments only on a case by case basis, where the student and I discuss the situation and determine the right solution. Sometimes, the result is that they submit what they had for partial credit and move on. Sometimes, we agree on a late penalty, and sometimes, I accept it for full credit. Each situation is different.</p>
+
+<p>By default, checkpoints are worth 4 points. You can process them for different point values by adding a number flag to process. So, for example, at the end of the week, I process all late checkpoints for 50% credit via: “process –2 *” this gives 2 points per, and only runs on the files in the directory (via the “*”) as opposed to all students in the class list.</p>
+
+<p>Extra credit for early submission. Some instructors like to offer extra credit to submit things like checkpoints early. I do not do this, but you are welcome to if you would like.</p>
+
         </article>
     </div>
+
+   <script src="../course/js/highlight/highlight.pack.js"></script>
+   <script>hljs.initHighlightingOnLoad();</script>
 
 
 </body>
